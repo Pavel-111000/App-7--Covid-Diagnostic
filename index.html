@@ -34,32 +34,32 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 
 
 <script>
-	//Variables to hold user answers and percentages
-        var allergy_count = 0;
-        var cold_count = 0;
-	var allergy_percent = 0;
-	var cold_percent = 0;
+	//Variables changed to represent skin cancer or not skin cancer
+        var skincancer_count = 0;
+        var notskincancer_count = 0;
+	var skincancer_percent = 0;
+	var notskincancer_percent = 0;
 
-	//Adds 1 to allergy_count when user indicates answer
-        function allergyAdd(){
-            allergy_count = allergy_count + 1; //this function will add when participant click on yes or no
+	//Adds 1 to skincancer_count when user indicates answer
+        function skincancerAdd(){
+            skincancer_count = skincancer_count + 1; //this function will add to skin cancer count when participant click on yes or no
         }
 
-	//Adds 1 to cold_count when user indicates answer
-        function coldAdd(){
-            cold_count = cold_count + 1; //this function will add when participant clicks yes or no
+	//Adds 1 to notskincancer_count when user indicates answer
+        function notskincancerAdd(){
+            notskincancer_count = notskincancer_count + 1; //this function will add to not skin cancer when participant clicks yes or no
         }
 	
-	//Calculates percent of Allergy Answers & Cold Answers and stores them
+	//Calculates percent of skincancer Answers & notksincancer Answers and stores them
 	function getPercent() {
-		allergy_percent = (allergy_count / 4) * 100; //calculated the total divided by four for allergy percentage
-		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
+		skincancer_percent = (skincancer_count / 4) * 100; //calculated the total divided by four for skincancer percentage
+		noskincancer_percent = (noskincancer_count / 4) * 100;	//calculated the total divided by four for noskincancer percentage
 	}
 	//Gets the Percents when results is pushed and prints the results to the user
 	function printResults() { 
 		getPercent(); //calls the get percent function
-		document.getElementById("allergy%").innerHTML = allergy_percent; //changes allergy% to allergy_percent in html
-		document.getElementById("cold%").innerHTML = cold_percent; //changes cold% to cold_percent in html
+		document.getElementById("skincancer%").innerHTML = skincancer_percent; //changes skincancer% to skincancer_percent in html
+		document.getElementById("notskincancer%").innerHTML = notskincancer_percent; //changes notskincancer% to notkskincancer_percent in html
 
 	}
 
@@ -115,8 +115,8 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>   <!--Input the question wanted-->
-	<a href="#two" onclick="allergyAdd()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-	<a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+	<a href="#two" onclick="skincancerAdd()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
+	<a href="#two" onclick="notskincancerAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 
@@ -127,8 +127,8 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p> <!--page content changed to question-->
-		<a href="#three" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
-		<a href="#three" onclick="allergyAdd()" class="w3-btn w3-black"> No </a> <!--no button added to allergy variable-->
+		<a href="#three" onclick="notskincancerAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
+		<a href="#three" onclick="skincancerAdd()" class="w3-btn w3-black"> No </a> <!--no button added to allergy variable-->
 	</div>
 </div>	
 	
@@ -139,8 +139,8 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 	
     	<div id="content" class="w3-container">
         <p>Do you have a sore throat?</p> <!--changed page content to question-->
-		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
-		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-black"> No </a>	<!--no button added to allergy variable-->
+		<a href="#four" onclick="notskincancerAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable-->
+		<a href="#four" onclick="skincancerAdd()" class="w3-btn w3-black"> No </a>	<!--no button added to allergy variable-->
     	</div>
 </div>
 	
@@ -151,8 +151,8 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 	
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p>  <!--changed page content to question-->
-		<a href="#five" onclick="allergyAdd()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
-		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
+		<a href="#five" onclick="skincancerAdd()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable-->
+		<a href="#five" onclick="notskincancerAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added-->
     	</div>
 </div>
 	
@@ -163,8 +163,8 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 	
     	<div id="content" class="w3-container">
 		<a onclick="printResults()" class="w3-btn w3-black"> Results </a> <!--button updates results when clicked-->
-		<p> The percent your answers correspond to allergies is: <span id="allergy%"></span>%. </p> <!--prints allergy results-->
-		<p> The percent your answers correspond to a cold is: <span id="cold%"></span>%. </p> <!--prints cold results-->
+		<p> The percent your answers correspond to skin cancer is: <span id="skincancer%"></span>%. </p> <!--prints the results for the probability of skin cancer-->
+		<p> The percent your answers correspond to something other than skin cancer is: <span id="notskincancer"></span>%. </p> <!--prints the results for the probability of it not being skin cancer-->
 		
     	</div>
 </div>
