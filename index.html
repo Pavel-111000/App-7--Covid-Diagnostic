@@ -35,30 +35,30 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 <script>
 	//Variables changed to represent covid19, cold, flu, and allergies
         var covid19_count = 0;
-        var notskincancer_count = 0;
+        var cold_count = 0;
 	var covid19_percent = 0;
-	var notskincancer_percent = 0;
+	var cold_percent = 0;
 
 	//Adds 1 to covid19_count when user indicates answer
         function covid19Add(){
             covid19_count = covid19_count + 1; //this function will add to covid19 count when participant click on yes or no
         }
 
-	//Adds 1 to notskincancer_count when user indicates answer
-        function notskincancerAdd(){
-            notskincancer_count = notskincancer_count + 1; //this function will add to not skin cancer when participant clicks yes or no
+	//Adds 1 to cold_count when user indicates answer
+        function coldAdd(){
+            cold_count = cold_count + 1; //this function will add to not skin cancer when participant clicks yes or no
         }
 	
 	//Calculates percent of skincancer Answers & notksincancer Answers and stores them
 	function getPercent() {
 		covid19_percent = (covid19_count / 4) * 100; //calculated the total divided by the four questions for covid19 percentage
-		notskincancer_percent = (notskincancer_count / 4) * 100;	//calculated the total divided by four for noskincancer percentage
+		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for noskincancer percentage
 	}
 	//Gets the Percents when results is pushed and prints the results to the user
 	function printResults() { 
 		getPercent(); //calls the get percent function
 		document.getElementById("covid19%").innerHTML = covid19_percent; //changes covid19% to covid19_percent in html
-		document.getElementById("notskincancer%").innerHTML = notskincancer_percent; //changes notskincancer% to notkskincancer_percent in html
+		document.getElementById("cold%").innerHTML = cold_percent; //changes cold% to notkskincancer_percent in html
 
 	}
 
@@ -117,7 +117,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
     	<div id="content" class="w3-container">
         <p>Is your blemish assymetrical?</p>   <!--Input the question wanted for skin cancer-->
 	<a href="#two" onclick="covid19Add()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable to covid19 function-->
-	<a href="#two" onclick="notskincancerAdd()" class="w3-btn w3-black"> No </a>	<!--No button with not skin cancer variable added and recorded in function-->
+	<a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added and recorded in function-->
     	</div>
 </div>
 
@@ -128,7 +128,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	
 	<div id="content" class="w3-container">
 		<p>Is the blemish the same color all over?</p> <!--page content changed to question content for skin cancer-->
-		<a href="#three" onclick="notskincancerAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to the not skin cancer variable-->
+		<a href="#three" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to the cold variable-->
 		<a href="#three" onclick="covid19Add()" class="w3-btn w3-black"> No </a> <!--no button added to covid19 variable-->
 	</div>
 </div>	
@@ -140,7 +140,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	
     	<div id="content" class="w3-container">
         <p>Do the borders of the blemish seem smooth and even?</p> <!--changed page content to question for skin cancer-->
-		<a href="#four" onclick="notskincancerAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to not skin cancer variable for function-->
+		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable for function-->
 		<a href="#four" onclick="covid19Add()" class="w3-btn w3-black"> No </a>	<!--no button added to covid19 variable for function-->
     	</div>
 </div>
@@ -153,7 +153,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
     	<div id="content" class="w3-container">
         <p>Is the blemish evolving?</p>  <!--changed page content to question applying to skin cancer-->
 		<a href="#five" onclick="covid19Add()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable to covid19 function-->
-		<a href="#five" onclick="notskincancerAdd()" class="w3-btn w3-black"> No </a>	<!--No button with not skin cancer variable added to register in function-->
+		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added to register in function-->
     	</div>
 </div>
 	
@@ -165,7 +165,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
     	<div id="content" class="w3-container">
 		<a onclick="printResults()" class="w3-btn w3-black"> Results </a> <!--button updates results when clicked-->
 		<p> The percent your answers correspond to skin cancer is: <span id="covid19%"></span>%. </p> <!--prints the results for the probability of covid19-->
-		<p> The percent your answers correspond to something other than skin cancer is: <span id="notskincancer%"></span>%. </p> <!--prints the results for the probability of it not being skin cancer-->
+		<p> The percent your answers correspond to something other than skin cancer is: <span id="cold%"></span>%. </p> <!--prints the results for the probability of it not being skin cancer-->
 		
 		<p> Examples of skin cancer: <p> <!--caption for the photo-->
 		<img src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/03/ds00575-melanoma-pictures-for-self-examination.jpg" alt="Visual Symptoms of Skin Cancer"> <!--inserted image url with correct code for display on results page-->
