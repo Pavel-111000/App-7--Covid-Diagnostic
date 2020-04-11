@@ -38,12 +38,24 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
         var cold_count = 0;
 	var covid19_percent = 0;
 	var cold_percent = 0;
+	var flu_count = 0;
+	var flu_percent = 0;
+	var allergies_count = 0;
+	var allergies_percent = 0;
 
 	//Adds 1 to covid19_count when user indicates answer
         function covid19Add(){
             covid19_count = covid19_count + 1; //this function will add to covid19 count when participant click on yes or no
         }
-
+	
+ 	function fluAdd(){
+            flu_count = flu_count + 1; //this function will add to flu count when participant click on yes or no
+        }
+	
+	function allergiesAdd(){
+            allergies_count = allergies_count + 1; //this function will add to allergies count when participant click on yes or no
+        }
+	
 	//Adds 1 to cold_count when user indicates answer
         function coldAdd(){
             cold_count = cold_count + 1; //this function will add to not skin cancer when participant clicks yes or no
@@ -58,7 +70,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	function printResults() { 
 		getPercent(); //calls the get percent function
 		document.getElementById("covid19%").innerHTML = covid19_percent; //changes covid19% to covid19_percent in html
-		document.getElementById("cold%").innerHTML = cold_percent; //changes cold% to notkskincancer_percent in html
+		document.getElementById("cold%").innerHTML = cold_percent; //changes cold% to cold_percent in html
 
 	}
 
@@ -164,8 +176,8 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	
     	<div id="content" class="w3-container">
 		<a onclick="printResults()" class="w3-btn w3-black"> Results </a> <!--button updates results when clicked-->
-		<p> The percent your answers correspond to skin cancer is: <span id="covid19%"></span>%. </p> <!--prints the results for the probability of covid19-->
-		<p> The percent your answers correspond to something other than skin cancer is: <span id="cold%"></span>%. </p> <!--prints the results for the probability of it not being skin cancer-->
+		<p> The percent your answers correspond to Covid-19 is: <span id="covid19%"></span>%. </p> <!--prints the results for the probability of covid19-->
+		<p> The percent your answers correspond to a cold is: <span id="cold%"></span>%. </p> <!--prints the results for the probability of it not being skin cancer-->
 		
 		<p> Examples of skin cancer: <p> <!--caption for the photo-->
 		<img src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/03/ds00575-melanoma-pictures-for-self-examination.jpg" alt="Visual Symptoms of Skin Cancer"> <!--inserted image url with correct code for display on results page-->
