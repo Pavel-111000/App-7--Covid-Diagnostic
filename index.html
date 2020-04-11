@@ -17,10 +17,9 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-Goal of this code is to provide a diagnostic for determining whether a skin blemish is or is not skin cancer with four quick questions, a results page that calculates perenctenages based on answers, and an image that is resizeable.
- 
+Goal of this code is to provide a diagnostic for determining whether certain symptoms are related to the novel coronavirus, cold, flu, or seasonal allergies.
 Known Issues:
-Issue includes inserting the resizeable image because the rest of the code is mostly taken from the previous assignment. 
+Displaying the results in a creative way, wanted to make a chart but not sure how. 
 -->
 
    <head> 
@@ -52,7 +51,7 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 	
 	//Calculates percent of skincancer Answers & notksincancer Answers and stores them
 	function getPercent() {
-		skincancer_percent = (skincancer_count / 4) * 100; //calculated the total divided by four for skincancer percentage
+		skincancer_percent = (skincancer_count / 4) * 100; //calculated the total divided by the four questions for skincancer percentage
 		notskincancer_percent = (notskincancer_count / 4) * 100;	//calculated the total divided by four for noskincancer percentage
 	}
 	//Gets the Percents when results is pushed and prints the results to the user
@@ -96,11 +95,13 @@ Issue includes inserting the resizeable image because the rest of the code is mo
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Skin Cancer or Not?</h1> <!-- changed the header to apply to my specific diagnostic test -->
+	<h1>Covid-19 Diagnostic Questionnaire</h1> <!-- changed the header to apply to my specific diagnostic test -->
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you afraid you might have skin cancer, but wonder if it is simply a mole or freckle? Answer a few short questions to find out!</p> <!--Changed to be relevant to new questions-->
+	<p>Are you afraid you might have Covid-19, but wonder if it is simply a cold, the flu, or seasonal allergies? Answer a few short questions to find out!</p> <!--Changed to be relevant to new questions pertaining to Covid-19-->
+	
+	<p>One thing to note concerning symptoms: Covid-19 symptoms last 7-25 days, Cold symptoms last less than 14 days, Flu symptoms last 7-14 days, and Seasonal Allergies can last for several weeks.</p> <!--Inserted this disclaimer since this is not really a question and most users have had symptoms that have lasted less than a week which fits into all of these categories-->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
