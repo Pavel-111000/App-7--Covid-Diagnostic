@@ -48,17 +48,33 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
             covid19_count = covid19_count + 1; //this function will add to covid19 count when participant click on yes or no
         }
 	
+	function scovid19Add(){
+            covid19_count = covid19_count + 0.5; //this function will add .5 to covid19 count when participant click on yes or no
+        }
+	
  	function fluAdd(){
             flu_count = flu_count + 1; //this function will add to flu count when participant click on yes or no
+        }
+	
+	function sfluAdd(){
+            flu_count = flu_count + 0.5; //this function will add .5 to flu count when participant click on yes or no
         }
 	
 	function allergiesAdd(){
             allergies_count = allergies_count + 1; //this function will add to allergies count when participant click on yes or no
         }
 	
+	function sallergiesAdd(){
+            allergies_count = allergies_count + 0.5; //this function will add .5 to allergies count when participant click on yes or no
+        }
+	
 	//Adds 1 to cold_count when user indicates answer
         function coldAdd(){
             cold_count = cold_count + 1; //this function will add to cold when participant clicks yes or no
+        }
+	
+	function scoldAdd(){
+            cold_count = cold_count + 0.5; //this function will add .5 to cold when participant clicks yes or no
         }
 	
 	//Calculates percent of skincancer Answers & notksincancer Answers and stores them
