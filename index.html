@@ -168,7 +168,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are you sneezing?</p> <!--changed page content to question for skin cancer-->
+        <p>Are you sneezing?</p> <!--changed page content to question for sneezing-->
 		<a href="#four" onclick="coldAdd();allergiesAdd();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold and allergies variable for function-->
 		<a href="#four" onclick="covid19Add();fluAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to covid19 and flu variable for function-->
     	</div>
@@ -181,12 +181,37 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	
     	<div id="content" class="w3-container">
         <p>Do you have a runny or stuffy nose?</p>  <!--changed page content to question applying to skin cancer-->
-		<a href="#five" onclick="covid19Add()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable to covid19 and function-->
-		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added to register in function-->
+		<a href="#five" onclick="covid19Add();sfluAdd();"class="w3-btn w3-black"> No </a> <!--This is the first button with the control to add the variable to covid19 and function-->
+		<a href="#five" onclick="coldAdd();sfluAdd();allergies();" class="w3-btn w3-black"> Yes </a>	<!--No button with cold variable added to register in function-->
     	</div>
 </div>
 	
-<div class="page" id="five"> <!--fifth page for results-->
+<div class="page" id="five"> <!--fifth page with id changed-->
+<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you have a sore throat?</p> <!--changed page content to question for sore throat-->
+		<a href="#six" onclick="fluAdd();sallergiesAdd();scoldAdd();scovid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to flu and sometimes variables for function-->
+		<a href="#six" onclick="scovid19Add();sallergiesAdd();scoldAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to the sometimes variables for function-->
+    	</div>
+</div>
+
+<div class="page" id="six"> <!--fifth page with id changed-->
+<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you have a fever?</p> <!--changed page content to question for fever-->
+		<a href="#seven" onclick="fluAdd();covid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold and allergies variable for function-->
+		<a href="#seven" onclick="allergiesAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to allergies variable for function-->
+    		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> Just for a short period </a>	<!-- button added to cold variable for function-->
+	</div>
+</div>
+	
+<div class="page" id="eleven"> <!--last page for results-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
