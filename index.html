@@ -58,13 +58,13 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	
 	//Adds 1 to cold_count when user indicates answer
         function coldAdd(){
-            cold_count = cold_count + 1; //this function will add to not skin cancer when participant clicks yes or no
+            cold_count = cold_count + 1; //this function will add to cold when participant clicks yes or no
         }
 	
 	//Calculates percent of skincancer Answers & notksincancer Answers and stores them
 	function getPercent() {
 		covid19_percent = (covid19_count / 4) * 100; //calculated the total divided by the four questions for covid19 percentage
-		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for noskincancer percentage
+		cold_percent = (cold_count / 4) * 100;	//calculated the total divided by four for cold percentage
 	}
 	//Gets the Percents when results is pushed and prints the results to the user
 	function printResults() { 
@@ -127,10 +127,11 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Is your blemish assymetrical?</p>   <!--Input the question wanted for skin cancer-->
-	<a href="#two" onclick="covid19Add()" class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable to covid19 function-->
-	<a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added and recorded in function-->
-    	</div>
+        <p>What kind of cough do you have?</p>   <!--Input the question wanted for coughing symptoms-->
+	<a href="#two" onclick="covid19Add();fluAdd();" class="w3-btn w3-black"> Persistent dry cough </a> <!--This is the first button with the control to add the variable to covid19 function, but also to the flu function at the same time-->
+	<a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> Mild cough </a>	<!--No button with cold variable added and recorded in function-->
+    	<a href="#two" onclick="allergiesAdd()" class="w3-btn w3-black"> Rare or no cough </a> <!--button for allergies answer-->
+	</div>
 </div>
 
 <div class="page" id="two"> <!--Copied a new page to appear-->
@@ -139,9 +140,9 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is the blemish the same color all over?</p> <!--page content changed to question content for skin cancer-->
-		<a href="#three" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to the cold variable-->
-		<a href="#three" onclick="covid19Add()" class="w3-btn w3-black"> No </a> <!--no button added to covid19 variable-->
+		<p>Do you have shortness of breath?</p> <!--page content changed to question content for shortness of breath-->
+		<a href="#three" onclick="coldAdd();allergiesAdd();fluAdd();" onclick class="w3-btn w3-black"> No </a> <!--button for yes added to the cold, flu, and allergies variable-->
+		<a href="#three" onclick="covid19Add()" class="w3-btn w3-black"> Yes </a> <!--no button added to covid19 variable-->
 	</div>
 </div>	
 	
@@ -151,9 +152,9 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do the borders of the blemish seem smooth and even?</p> <!--changed page content to question for skin cancer-->
-		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold variable for function-->
-		<a href="#four" onclick="covid19Add()" class="w3-btn w3-black"> No </a>	<!--no button added to covid19 variable for function-->
+        <p>Are you sneezing?</p> <!--changed page content to question for skin cancer-->
+		<a href="#four" onclick="coldAdd();allergiesAdd();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold and allergies variable for function-->
+		<a href="#four" onclick="covid19Add();fluAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to covid19 and flu variable for function-->
     	</div>
 </div>
 	
@@ -163,8 +164,8 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Is the blemish evolving?</p>  <!--changed page content to question applying to skin cancer-->
-		<a href="#five" onclick="covid19Add()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable to covid19 function-->
+        <p>Do you have a runny or stuffy nose?</p>  <!--changed page content to question applying to skin cancer-->
+		<a href="#five" onclick="covid19Add()"class="w3-btn w3-black"> Yes </a> <!--This is the first button with the control to add the variable to covid19 and function-->
 		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black"> No </a>	<!--No button with cold variable added to register in function-->
     	</div>
 </div>
