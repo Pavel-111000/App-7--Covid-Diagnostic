@@ -193,14 +193,14 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	
     	<div id="content" class="w3-container">
         <p>Do you have a sore throat?</p> <!--changed page content to question for sore throat-->
-		<a href="#six" onclick="fluAdd();sallergiesAdd();scoldAdd();scovid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to flu and sometimes variables for function-->
-		<a href="#six" onclick="scovid19Add();sallergiesAdd();scoldAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to the sometimes variables for function-->
+		<a href="#six" onclick="sfluAdd();sallergiesAdd();coldAdd();scovid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to cold and sometimes variables for function-->
+		<a href="#six" onclick="scovid19Add();sallergiesAdd();sfluAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to the sometimes variables for function-->
     	</div>
 </div>
 
-<div class="page" id="six"> <!--fifth page with id changed-->
+<div class="page" id="six"> <!--sixth page with id changed-->
 <div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
+		<h1>Question 6</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -209,6 +209,54 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 		<a href="#seven" onclick="allergiesAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to allergies variable for function-->
     		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> Just for a short period </a>	<!-- button added to cold variable for function-->
 	</div>
+</div>
+
+	<div class="page" id="seven"> <!--seventh page with id changed-->
+<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 7</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are you feeling tired and weak?</p> <!--changed page content to question for fatigue-->
+		<a href="#eight" onclick="fluAdd();sallergiesAdd();scoldAdd();scovid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to flu and sometimes variables for function-->
+		<a href="#eight" onclick="scovid19Add();sallergiesAdd();scoldAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to the sometimes variables for function-->
+    	</div>
+</div>
+
+	<div class="page" id="eight"> <!--eighth page with id changed-->
+<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 8</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are you experiencing headaches?</p> <!--changed page content to question for headaches-->
+		<a href="#nine" onclick="fluAdd();sallergiesAdd();scovid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to flu and sometimes variables for function-->
+		<a href="#nine" onclick="scovid19Add();sallergiesAdd();coldAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to the sometimes variables and cold variable for function-->
+    	</div>
+</div>
+
+	<div class="page" id="nine"> <!--ninth page with id changed-->
+<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you have body aches and pains?</p> <!--changed page content to question for aches and pains-->
+		<a href="#ten" onclick="fluAdd();coldAdd();scovid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to flu, cold and sometimes covid19 variables for function-->
+		<a href="#ten" onclick="scovid19Add();allergiesAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to the sometimes scovid and allergies variables for function-->
+    	</div>
+</div>
+
+	<div class="page" id="ten"> <!--tenth page with id changed-->
+<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 10</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you have diarrhea?</p> <!--changed page content to question for diarrhea-->
+		<a href="#eleven" onclick="sfluAdd();scovid19Add();" class="w3-btn w3-black"> Yes </a> <!--button for yes added to sometimes flu and sometimes covid variables for function-->
+		<a href="#eleven" onclick="scovid19Add();allergiesAdd();coldAdd();sfluAdd();" class="w3-btn w3-black"> No </a>	<!--no button added to the sometimes variables and allergies and cold for function-->
+    	</div>
 </div>
 	
 <div class="page" id="eleven"> <!--last page for results-->
@@ -221,8 +269,8 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 		<p> The percent your answers correspond to Covid-19 is: <span id="covid19%"></span>%. </p> <!--prints the results for the probability of covid19-->
 		<p> The percent your answers correspond to a cold is: <span id="cold%"></span>%. </p> <!--prints the results for the probability of it not being skin cancer-->
 		
-		<p> Examples of skin cancer: <p> <!--caption for the photo-->
-		<img src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/03/ds00575-melanoma-pictures-for-self-examination.jpg" alt="Visual Symptoms of Skin Cancer"> <!--inserted image url with correct code for display on results page-->
+		<p> Graphic Used From Asthma and Allergy Foundation of America: <p> <!--caption for the photo-->
+		<img src="https://www.aafa.org/media/2631/respiratory-illness-symptoms-chart-coronavirus-flu-cold-allergies.png" alt="Visual Symptoms of Skin Cancer"> <!--inserted image url with correct code for display on results page-->
 		<style>  
        	img, object{
             	max-height:auto%; 
