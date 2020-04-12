@@ -90,6 +90,8 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 		getPercent(); //calls the get percent function
 		document.getElementById("covid19%").innerHTML = covid19_percent; //changes covid19% to covid19_percent in html
 		document.getElementById("cold%").innerHTML = cold_percent; //changes cold% to cold_percent in html
+		document.getElementById("flu%").innerHTML = flu_percent; //changes flu% to flu_percent in html
+		document.getElementById("allergies%").innerHTML = allergies_percent; //changes allergies% to allergies_percent in html
 
 	}
 
@@ -271,6 +273,8 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 		<a onclick="printResults()" class="w3-btn w3-black"> Results </a> <!--button updates results when clicked-->
 		<p> The percent your answers correspond to Covid-19 is: <span id="covid19%"></span>%. </p> <!--prints the results for the probability of covid19-->
 		<p> The percent your answers correspond to a cold is: <span id="cold%"></span>%. </p> <!--prints the results for the probability of it not being skin cancer-->
+		<p> The percent your answers correspond to the flu is: <span id="flu%"></span>%. </p> <!--prints the results for it being the flu-->
+		<p> The percent your answers correspond to seasonal allergies is: <span id="allergies%"></span>%. </p> <!--prints the results for it being the seasonal allergies-->
 		
 		<p> Graphic Used From Asthma and Allergy Foundation of America: <p> <!--caption for the photo-->
 		<img src="https://www.aafa.org/media/2631/respiratory-illness-symptoms-chart-coronavirus-flu-cold-allergies.png" alt="Visual Symptoms of Skin Cancer"> <!--inserted image url with correct code for display on results page-->
