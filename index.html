@@ -95,6 +95,14 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 
 	}
 
+	//draw image function added for the new canvas displaying the chart on results page, from APp 6 but modified
+	function drawImage() {
+		var canvas = document.getElementById("myCanvas"); //finds the canvas element
+		var ctx = canvas.getContext("2d"); //assigns the ctx variable to be 2 dimensional
+		var chart = document.getElementById("chart"); //assigns an image varibale that calls upon a new picture that is described below
+		ctx.drawImage(chart, 0, 0); //draws the image in the top left corner of the canvas 
+	}
+	
 		// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub and when the document was last modified.
        			var docMod = document.lastModified;
       			alert("This file last modified  " + docMod); //this will provide an alert pop up on the screen
