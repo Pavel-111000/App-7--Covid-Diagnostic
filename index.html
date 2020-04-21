@@ -103,6 +103,13 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 		ctx.drawImage(chart, 0, 0); //draws the image in the top left corner of the canvas 
 	}
 	
+	function drawRec() {
+		var canvas = document.getElementById("myCanvas"); // finds the canvas element 
+		var ctx = canvas.getContext("2d"); // drawing context element assigned to 2D
+		ctx.fillStyle = "#FF0000"; //red rectagnle command (style)
+		ctx.fillRect(600, 100, 10, 10); //placement (first two numbers are x and y coordinates of top left) and dimensions (second two numbers are width and height of rectangle)
+	} //this function draws a rectangle that is red and has those dimensions, in a certain part of the canvas
+	
 		// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub and when the document was last modified.
        			var docMod = document.lastModified;
       			alert("This file last modified  " + docMod); //this will provide an alert pop up on the screen
@@ -287,7 +294,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 		<p> Looked into making a different display of results, I think percentages are pretty straight forward for users, however a graph displaying these percentages may help, but I have looked into drawing graphs on canvases, and using changing values that depend on answers people give is quite difficult, will keep looking </p>
 		
 		<p> Graphic Used From Asthma and Allergy Foundation of America: <p> <!--caption for the photo-->
-		<a onclick="drawImage()" class="w3-btn w3-green"> Load Your Graphic </a>
+		<a onclick="drawImage()" class="w3-btn w3-green"> 1. Load Graphic </a>	<!--draws the image of the chart, URL below-->	<a onclick="drawRec()" class="w3-btn w3-black"> Rectangle </a>	<!--rectangle button, calls on specific function-->
 		<canvas id="myCanvas" width="1162" height="1296" style="border:1px solid #000000;">  <!--created an image element that can be called upon using the id for the drawImage function below--><!--this element adds a canvas with a style border, changed size to auto to fill screen-->
 </canvas>
 		
