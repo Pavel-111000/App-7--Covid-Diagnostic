@@ -43,6 +43,15 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
 	var allergies_count = 0;
 	var allergies_percent = 0;
 	var total = covid19_count + cold_count + flu_count + allergies_count;
+	var button_count = 0;
+	
+	if (button_count = 1) {
+		drawRec()
+	}
+		
+	function buttonAdd() {
+		button_count = button_count + 1; //adds to button count
+	}
 
 	//Adds 1 to covid19_count when user indicates answer
         function covid19Add(){
@@ -165,7 +174,7 @@ Displaying the results in a creative way, wanted to make a chart but not sure ho
     	<div id="content" class="w3-container">
         <p>What kind of cough do you have?</p>   <!--Input the question wanted for coughing symptoms-->
 	<a href="#two" onclick="covid19Add();fluAdd();" class="w3-btn w3-black"> Persistent dry cough </a> <!--This is the first button with the control to add the variable to covid19 function, but also to the flu function at the same time-->
-	<a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> Mild cough </a>	<!--No button with cold variable added and recorded in function-->
+	<a href="#two" onclick="coldAdd();buttonAdd();" class="w3-btn w3-black"> Mild cough </a>	<!--No button with cold variable added and recorded in function-->
     	<a href="#two" onclick="allergiesAdd()" class="w3-btn w3-black"> Rare or no cough </a> <!--button for allergies answer-->
 	</div>
 </div>
